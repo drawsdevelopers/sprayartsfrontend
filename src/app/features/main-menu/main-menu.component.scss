@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.container-menu {
+  justify-content: space-between;
+  width: 100vw;
+  box-sizing: content-box;
+  display: inline-flex;
+  padding: 10px;
+  background: #eee;
+
+  .menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+
+    ul:hover li a {
+      transform: scale(1.2);
+      opacity: 0.2;
+      filter: blur(5px);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        transition: 0.5s;
+
+        a {
+          display: block;
+          position: relative;
+          text-decoration: none;
+          padding: 5px;
+          font-size: 1.2em;
+          font-family: sans-serif;
+          color: #293247;
+          text-transform: uppercase;
+          transition: 0.5s;
+        }
+
+        a:hover {
+          color: #fff;
+          transform: scale(1.5);
+          opacity: 1;
+          filter: blur(0);
+        }
+
+        a:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #ff497c;
+          border-radius: 20px 0px 20px 0px;
+          transition: 0.5s;
+          transform-origin: right;
+          transform: scaleX(0);
+          z-index: -1;
+        }
+
+        a:hover:before {
+          transition: transform 0.5s;
+          transform-origin: left;
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    .side-nav {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        a:hover {
+          color: #fff;
+          transform: scale(1.2);
+          opacity: 1;
+          filter: blur(0);
+        }
+      }
+    }
+  }
+
+  .autenticacao {
+    float: right;
+    height: 80px;
+    padding: 25px;
+    a {
+      color: #293247;
+      transition: 0.5s;
+    }
+
+    a:hover,
+    a.selected {
+      background: #ff497c;
+      color: #fff;
+    }
+
+    .botao {
+      border-radius: 30px;
+      padding: 10px 25px;
+      margin: 10px;
+    }
+
+    .destaque {
+      background-color: #eee;
+      border: solid 1px #f0c95d;
+    }
+  }
+  .menu-toggle {
+    float: right;
+    color: #eee;
+    background-color: #f0c95d;
+    border: solid 1px #777;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 0px 5px 0 5px;
+  }
+
+  .menu-toggle:hover {
+    background: #ff497c;
+  }
+}
+
+@media (min-width: 525px) {
+  .menu-toggle {
+    display: none;
+  }
+  .cabecalho .menu ul li {
+    display: inline-block;
+  }
+}

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  // background-image: url('./assets/img/festicket/festicket3.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  // z-index: -1;
+}
+
+.grid {
+  display: grid;
+}
+
+.header {
+  grid-area: cabecalho;
+}
+
+.main {
+  grid: conteudo;
+}
+
+.section {
+  grid-area: secao;
+}
+
+.footer {
+  grid-area: rodape;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+    'cabecalho cabecalho'
+    'conteudo conteudo'
+    'rodape rodape';
+}
