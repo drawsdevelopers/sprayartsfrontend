@@ -6,7 +6,7 @@
 .container-home {
   position: absolute;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 .paralax {
@@ -20,8 +20,7 @@
   position: relative;
   left: 0;
   top: 0;
-  background-image: url('../../../assets/img/nww/nww1.jpg');
-  background-attachment: fixed;
+  // background-image: url('../../../assets/img/nww/nww01.jpg');
   display: flex;
   align-content: center;
   align-items: center;
@@ -29,6 +28,20 @@
   justify-content: center;
   font-family: sans-serif;
   color: #f1f1f1; /* Grey text */
+  background-attachment: fixed;
+
+  video#bgVideo {
+    position: fixed; // Play the video in full screen mode
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: opacity(60%);
+    transform: translateX(0%) translateY(0%);
+    z-index: -1; // Put the video behind all other elements
+  }
 
   p {
     z-index: 1;
@@ -41,7 +54,6 @@
 }
 
 .content1::before {
-  background: rgb(0, 0, 0); /* Fallback color */
   background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
   content: '';
   display: block;
@@ -49,33 +61,166 @@
   position: absolute;
   width: 30vw;
   color: #fff;
-  border: solid 1px #fff;
+  border: solid 2px transparent;
+  border-image: linear-gradient(0deg, #e0819c, #ff0048, #b033c0, #1e013a);
+  border-image-slice: 1;
   z-index: 0.9;
 }
 
-.content2 {
-  // background-image: url('../../../assets/img/nww/nww2.jpg');
-  // background-attachment: fixed;
-  // background-size: cover;
-}
-
 .content3 {
-  background-image: url('../../../assets/img/festicket/festicket1.jpg');
-  background-attachment: fixed;
-  background-size: cover;
+  .container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0 0 40px;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      margin: 0 0 40px;
+
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform 0.7s;
+        transform: rotateY(90deg);
+        transform-origin: left;
+
+        img {
+          position: absolute;
+          width: 100vw;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+        }
+
+        .content {
+          position: relative;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .content-item {
+            width: 50vw;
+            height: 50vh;
+            margin-left: 100%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            h2 {
+              height: auto;
+              font-size: 2em;
+              color: #000;
+            }
+            p {
+              height: auto;
+              font-size: 1.2em;
+              color: #000;
+            }
+          }
+        }
+      }
+
+      input[type='radio']:checked ~ .slide {
+        transition: transform 0.7s;
+        transform: rotateY(0deg);
+        transform-origin: right;
+
+        img {
+          animation: animate 40s linear infinite;
+
+          @keyframes animate {
+            0% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.5);
+            }
+            100% {
+              transform: scale(1);
+            }
+          }
+        }
+      }
+
+      .form-radio {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        display: inline-block;
+        position: relative;
+        background-color: #5f5d5d;
+        color: #666;
+        top: 10px;
+        border: 0;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-right: 7px;
+        outline: none;
+
+        :after {
+          filter: blur(40px);
+        }
+        :hover {
+          background-color: #f7f7f7;
+        }
+        :checked {
+          background-color: #f1f1f1;
+        }
+      }
+
+      input[type='radio'] {
+        position: relative;
+        z-index: 1000;
+
+        height: 10px;
+        width: 40px;
+        opacity: 1;
+        left: 50%;
+        top: 95%;
+      }
+
+      input[type='radio']:hover {
+        background: linear-gradient(45deg, #ff0048, #fff);
+      }
+      input[type='radio']:checked {
+        background: linear-gradient(45deg, #ff0048, #fff);
+      }
+    }
+  }
 }
 
 .content4 {
-  background-image: url('../../../assets/img/festicket/festicket2.jpg');
+  background-image: url('../../../assets/img/nww/nww01.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
 
-// .content5 {
-//   background-image: url('../../../assets/img/festicket/festicket3.jpg');
-//   background-attachment: fixed;
-//   background-size: cover;
-// }
+.content5 {
+  background-image: url('../../../assets/img/nww/nww01.jpg');
+  background-attachment: scroll;
+  background-size: cover;
+}
 
 // #square {
 //   position: fixed;
@@ -91,14 +236,35 @@
   position: relative;
   display: flex;
   justify-content: space-around;
-  background: rgba(0, 0, 0, 0.7);
+  background-image: url('../../../assets/img/stroke/stroke05.jpg');
+  background-attachment: fixed;
+  background-size: cover;
   padding: 10em;
+  flex-direction: column;
+}
+
+.title-cards {
+  line-height: 2em;
+  font-size: 4em;
+  font-weight: bold;
+  text-shadow: 7px 2px 2px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff0048;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
 }
 
 .content2 .card {
   position: relative;
   width: 250px;
-  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  background: #000;
+  opacity: 0.9;
   display: flex;
   // justify-content: center;
   align-items: center;

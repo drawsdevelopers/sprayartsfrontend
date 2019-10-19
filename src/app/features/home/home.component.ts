@@ -10,9 +10,8 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // const headerBg = document.getElementById('bg1');
-    // window.addEventListener('scroll', () => {
-    //   headerBg.style.opacity = 1 - window.pageYOffset + 'px';
-    // });
+    const element = document.getElementById('bgVideo');
+    // tslint:disable-next-line: no-string-literal
+    element['muted'] = true;
   }
 }
