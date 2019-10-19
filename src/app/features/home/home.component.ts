@@ -13,5 +13,9 @@ export class HomeComponent implements OnInit {
     const element = document.getElementById('bgVideo');
     // tslint:disable-next-line: no-string-literal
     element['muted'] = true;
+    // tslint:disable-next-line: no-string-literal
+    element['autoplay'] = true;
+
+    console.log(element);
   }
 }

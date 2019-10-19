@@ -30,7 +30,7 @@
   color: #f1f1f1; /* Grey text */
   background-attachment: fixed;
 
-  video#bgVideo {
+  iframe {
     position: fixed; // Play the video in full screen mode
     top: 0px;
     left: 0px;
@@ -154,7 +154,7 @@
               transform: scale(1);
             }
             50% {
-              transform: scale(1.5);
+              transform: scale(1.2);
             }
             100% {
               transform: scale(1);
