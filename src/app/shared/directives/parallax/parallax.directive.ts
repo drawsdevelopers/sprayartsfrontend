@@ -20,7 +20,6 @@ export class ParallaxDirective {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event) {
-    debugger;
     console.log(this.eleRef.nativeElement);
 
     document.getElementById(this.eleRef.nativeElement.id);
