@@ -89,3 +89,20 @@ body {
     'conteudo conteudo'
     'rodape rodape';
 }
+
+@media (min-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: overlay;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-areas:
+      'cabecalho'
+      'conteudo'
+      'rodape';
+  }
+}
