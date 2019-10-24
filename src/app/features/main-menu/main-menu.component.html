@@ -4,7 +4,7 @@
       <i class="fa fa-bars"></i>
     </button>
     <ul class="hide-on-med-and-down">
-      <li><a href="#"> HOME </a></li>
+      <li><a [routerLink]="['/home']"> HOME </a></li>
       <li><a href="#"> QUEM SOMOS</a></li>
       <li><a href="#"> CULTURA URBANA</a></li>
       <li><a href="#"> EVENTOS</a></li>
@@ -19,7 +19,7 @@
     </ul>
   </div>
   <aside class="autenticacao">
-    <a href="#" class="login botao">Login</a>
+    <a class="login botao" [routerLink]="['/login']">Login</a>
     <a href="#" class="botao">Registrar</a>
   </aside>
 </header>
