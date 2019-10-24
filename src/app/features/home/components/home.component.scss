@@ -80,20 +80,14 @@
 }
 
 .content2 {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  background-image: url('../../../assets/img/stroke/stroke05.jpg');
+  background-image: url('../../../../assets/img/stroke/stroke10.jpg');
   background-attachment: fixed;
   background-size: cover;
-  padding: 0.5em;
-  flex-direction: column;
-  width: 100vw;
 
   .title-cards {
     line-height: 2em;
-    height: 10vw;
-    font-size: 100%;
+    height: 15vw;
+    font-size: 190%;
     font-weight: bold;
     text-shadow: 7px 2px 2px #000000;
     display: flex;
@@ -137,6 +131,8 @@
       .box {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        height: 100%;
 
         .percent {
           position: relative;
@@ -149,24 +145,23 @@
 
           .number {
             position: absolute;
-            top: 3em;
-            left: 2em;
+            top: 40%;
+            left: 35%;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-
+            font-size: 1.1rem;
             h2 span {
-              font-size: 3em;
+              font-size: 1.2em;
               color: #777;
-              transition: 0.5s;
             }
           }
 
           h2 {
             color: #777;
             font-weight: 700;
-            font-size: 100%;
+            font-size: 1.5em;
             transition: 0.5s;
           }
         }
@@ -206,19 +201,23 @@
     }
 
     .card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-3px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 
       .text {
         color: #fff;
       }
 
-      .percent .number h2 {
-        color: #fff;
-        font-size: 60px;
-
-        span {
+      .box .percent .number {
+        top: 35%;
+        left: 30%;
+        h2 {
           color: #fff;
+          font-size: 2em;
+          span {
+            height: auto;
+            color: #fff;
+          }
         }
       }
 
@@ -404,7 +403,7 @@
 }
 
 .content4 {
-  background-image: url('../../../assets/img/nww/nww01.jpg');
+  background-image: url('../../../../assets/img/nww/nww01.jpg');
   background-attachment: fixed;
   background-size: cover;
 
@@ -540,7 +539,7 @@
 }
 
 .content6 {
-  background-image: url('../../../assets/img/nww/nww02.jpg');
+  background-image: url('../../../../assets/img/nww/nww02.jpg');
   background-attachment: scroll;
   background-size: cover;
 }
@@ -551,7 +550,7 @@
   .footer-top {
     height: 40vh;
     width: 100vw;
-    background-image: url('../../../assets/img/nww/nww03.jpg');
+    background-image: url('../../../../assets/img/nww/nww03.jpg');
     background-attachment: fixed;
     background-size: cover;
   }
