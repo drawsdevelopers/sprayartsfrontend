@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { HomeComponent } from './home.component';
-import { ParallaxDirective } from 'src/app/shared';
+import { HomeRoutingComponent } from './home-routing.component';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
-  declarations: [HomeComponent, ParallaxDirective],
-  imports: [CommonModule, SharedModule],
+  declarations: [HomeComponent, HomeRoutingComponent],
+  imports: [CommonModule, SharedModule, HomeRoutingModule],
   exports: []
 })
 export class HomeModule {}
