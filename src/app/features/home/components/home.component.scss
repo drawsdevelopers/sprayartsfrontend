@@ -80,16 +80,17 @@
 }
 
 .content2 {
-  background-image: url('../../../../assets/img/stroke/stroke10.jpg');
+  background-image: url('../../../../assets/img/nww/nww07.jpg');
   background-attachment: fixed;
   background-size: cover;
+  padding-top: 15px;
 
   .title-cards {
     line-height: 2em;
-    height: 15vw;
+    height: 10vw;
     font-size: 190%;
     font-weight: bold;
-    text-shadow: 7px 2px 2px #000000;
+    text-shadow: 3px 1px 1px #000000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -459,7 +460,7 @@
       // height: 61vh;
       text-align: center;
       text-decoration: none;
-      color: #fff;
+      color: rgb(92, 88, 88);
       box-sizing: border-box;
       background-size: 400%;
       border-radius: 40px;
@@ -539,7 +540,7 @@
 }
 
 .content6 {
-  background-image: url('../../../../assets/img/nww/nww02.jpg');
+  background-image: url('../../../../assets/img/nww/nww08.jpg');
   background-attachment: scroll;
   background-size: cover;
 }
