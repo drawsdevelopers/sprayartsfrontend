@@ -5,16 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainMenuComponent } from './features/main-menu/main-menu.component';
 import { HomeComponent } from './features/home/home.component';
-import { ParallaxDirective } from './shared';
+import { HomeModule, LoginModule } from './features';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainMenuComponent,
-    HomeComponent,
-    ParallaxDirective
+  declarations: [AppComponent, MainMenuComponent],
+
+  imports: [
+    BrowserModule,
+    SharedModule,
+    HomeModule,
+    LoginModule,
+    AppRoutingModule
   ],
-  imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
