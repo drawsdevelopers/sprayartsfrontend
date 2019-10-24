@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ParallaxDirective } from './directives';
 
 @NgModule({
-  declarations: [],
+  declarations: [ParallaxDirective],
   imports: [CommonModule],
   exports: [ParallaxDirective]
 })
