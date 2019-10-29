@@ -9,13 +9,13 @@
   width: 100vw;
   box-sizing: content-box;
   display: inline-flex;
-  background: #000;
+  background: #fff;
 
   .menu {
     display: inline-block;
     vertical-align: top;
-    height: 80px;
-    padding: 25px 0 0 0;
+    height: 120px;
+    padding: 40px 0 0 0;
 
     ul:hover li a {
       transform: scale(1.2);
@@ -38,12 +38,13 @@
           position: relative;
           text-decoration: none;
           padding: 5px;
-          font-size: 1.2em;
+          font-size: 1.4em;
           font-family: sans-serif;
-          color: #fff;
+          color: #000;
           text-transform: uppercase;
           transition: 0.5s;
-          background: -webkit-linear-gradient(0deg, #c6b7d4, #b033c0);
+          font-weight: bold;
+          background: -webkit-linear-gradient(0deg, #b033c0, #eb9df5);
           background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -83,11 +84,11 @@
     .side-nav {
       display: flex;
       flex-direction: column;
-      background: #000;
+      background: #fff;
 
       li {
         a:hover {
-          color: #fff;
+          color: #000;
           transform: scale(1.2);
           opacity: 1;
           filter: blur(0);
@@ -98,10 +99,10 @@
 
   .autenticacao {
     float: right;
-    height: 80px;
-    padding: 25px;
+    height: 120px;
+    padding: 40px;
     a {
-      color: #ffffff;
+      color: #b033c0;
       transition: 0.5s;
     }
 
@@ -112,14 +113,16 @@
     }
 
     .botao {
-      border-radius: 30px;
+      border-radius: 1px;
       padding: 10px 25px;
       margin: 1px;
     }
 
     .destaque {
-      background-color: #eee;
-      border: solid 1px #f0c95d;
+      background-color: #48dbdc;
+      // border: solid 1px ##48dbdc;
+      color: #000;
+      font-weight: bold;
     }
   }
   .menu-toggle {

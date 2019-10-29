@@ -2,11 +2,13 @@
 @import 'variables';
 @import '../node_modules/font-awesome/scss/font-awesome';
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   scrollbar-color: auto;
+  font-family: cursive, sans-serif;
 
   ::-webkit-scrollbar {
     width: 5px;
