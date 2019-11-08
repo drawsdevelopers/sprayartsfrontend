@@ -20,7 +20,7 @@
   position: relative;
   left: 0;
   top: 0;
-  // background-image: url('../../../../assets/img/nww/nww10.jpg');
+  background-image: url('../../../../assets/img/nww/nww10.jpg');
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -103,6 +103,7 @@
   align-items: center;
   font-size: 2em;
   justify-content: center;
+  height: 150vh;
   p {
     z-index: 1;
     background: transparent;
