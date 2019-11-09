@@ -16,7 +16,7 @@
   opacity: 1;
 }
 
-.content1 {
+.content-nww {
   position: relative;
   left: 0;
   top: 0;
@@ -92,7 +92,7 @@
   }
 }
 
-.content2 {
+.content-fise {
   display: flex;
   background-image: url('../../../../assets/img/fise/fise01.jpg');
   background-attachment: fixed;
@@ -145,7 +145,7 @@
   }
 }
 
-.content3 {
+.content-stroke {
   display: flex;
   z-index: 0;
   .box-left {
@@ -361,7 +361,7 @@
   }
 }
 
-.content4 {
+.content-cityleaks {
   display: flex;
   background-image: url('../../../../assets/img/cityleaks/cityleaks03.jpg');
   background-attachment: fixed;
@@ -414,114 +414,83 @@
   }
 }
 
-.content5 {
-  background: #fff;
+.content-storror {
+  display: flex;
+  background-image: url('../../../../assets/img/storror/storror02.jpg');
+  background-attachment: initial;
+  background-size: cover;
   display: flex;
   flex-direction: column;
+  align-content: center;
   align-items: center;
+  font-size: 2em;
   justify-content: center;
-
-  .content-item {
-    height: 60vh;
-    width: 60vw;
+  height: 160vh;
+  p {
+    z-index: 1;
+    background: transparent;
     display: flex;
-    flex-direction: column;
+    align-content: center;
     align-items: center;
     justify-content: center;
+    height: auto;
+    font-size: 4em;
+    font-weight: 900;
+    font-stretch: ultra-condensed;
     background: #fff;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    a {
-      position: relative;
-      transform: translate(-0%, -0%);
-      // width: 51vw;
-      // height: 61vh;
-      text-align: center;
-      text-decoration: none;
+  a {
+    height: 50px;
+    width: 250px;
+    z-index: 1;
+    color: white;
+    border: solid 1px white;
+    text-align: center;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+
+    i {
+      color: #fff;
+    }
+  }
+  a:hover {
+    background: #fff;
+    color: #000;
+
+    i {
       color: #000;
-      box-sizing: border-box;
-      background-size: 400%;
-      border-radius: 40px;
-      z-index: 0.9;
-      margin-top: 2%;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .content-a {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: auto;
-
-      background: #fff;
-      z-index: 1;
-      border-radius: 30px;
-      h2 {
-        height: auto;
-        color: #000;
-      }
-
-      p {
-        font-size: 90%;
-        height: auto;
-        color: #000;
-      }
-    }
-
-    a:hover {
-      animation: animate 8s linear infinite;
-
-      .content-a {
-        background: #fff;
-        h2 {
-          color: #000;
-        }
-
-        p {
-          color: #000;
-        }
-      }
-    }
-
-    @keyframes animate {
-      0% {
-        background-position: 0%;
-      }
-      100% {
-        background-position: 400%;
-      }
-    }
-
-    a:before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      z-index: -1;
-      background: linear-gradient(90deg, #5bf403, #c141f4, #ffeb3b, #03a9f4);
-      background-size: 400%;
-      border-radius: 30px;
-      transition: 0.5s;
-      opacity: 0;
-    }
-
-    a:hover:before {
-      opacity: 1;
-      filter: blur(20px);
-      transition: 0.5s;
-      animation: animate 8s linear infinite;
     }
   }
 }
 
-.content6 {
-  background-image: url('../../../../assets/img/nww/nww08.jpg');
-  background-attachment: scroll;
-  background-size: cover;
+.content-google-arts {
+  height: 120vh;
+  p {
+    z-index: 1;
+    background: transparent;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-size: 4em;
+    font-weight: 900;
+    font-stretch: ultra-condensed;
+    background: #eb2ab8;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .row {
+    height: 45%;
+
+    .rounded {
+      height: auto;
+    }
+  }
 }
 
 .footer-home {
@@ -544,4 +513,34 @@
     font-size: 0.9em;
     opacity: 0.7;
   }
+}
+
+.btn-buy {
+  position: fixed;
+  z-index: 1;
+  margin-top: 15%;
+  bottom: 0px;
+  left: 1px;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(59, 186, 236);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  span {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.btn-buy:hover {
+  background: #ff0048;
+  color: #fff;
 }

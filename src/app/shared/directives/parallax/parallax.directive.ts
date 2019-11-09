@@ -14,14 +14,11 @@ export class ParallaxDirective {
   initialTop: number = 0;
 
   constructor(private eleRef: ElementRef) {
-    this.initialTop =
-      this.eleRef.nativeElement.getBoundingClientRect().top - 100;
+    this.initialTop = this.eleRef.nativeElement.getBoundingClientRect().top;
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event) {
-    console.log(this.eleRef.nativeElement);
-
     document.getElementById(this.eleRef.nativeElement.id);
 
     this.eleRef.nativeElement.style.top =
@@ -35,8 +32,8 @@ export class ParallaxDirective {
   }
 
   aplyDeslocationY(event) {
-    this.eleRef.nativeElement.style.backgroundPositionY =
-      this.initialTop - window.scrollY / this.parallaxDeslocation + 'px';
+    this.eleRef.nativeElement.style.top =
+      this.initialTop - window.scrollY * this.parallaxRatio + 'px';
   }
 
   aplyOpacity(event) {

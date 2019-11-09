@@ -84,7 +84,7 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow: overlay;
   display: grid;
-  min-height: 100vh;
+  // min-height: 100vh;
   grid-template-columns: 300px 1fr;
   grid-template-rows: 100px 1fr 100px;
   grid-template-areas:
@@ -97,10 +97,11 @@ body {
   body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     overflow: overlay;
     display: grid;
     min-height: 100vh;
+    min-width: 100vw;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr 1fr;
     grid-template-areas:
