@@ -477,18 +477,71 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    font-size: 4em;
+    font-size: 6em;
     font-weight: 900;
     font-stretch: ultra-condensed;
-    background: #eb2ab8;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #eb2ab8;
   }
   .row {
     height: 45%;
 
-    .rounded {
+    a {
+      position: relative;
       height: auto;
+
+      .text-block {
+        display: none;
+        position: absolute;
+        bottom: 40px;
+        right: 15px;
+        height: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        h4 {
+          height: auto;
+          color: #fff;
+          font-weight: bold;
+        }
+
+        > p {
+          height: auto;
+          font-size: 1rem;
+          color: #fff !important;
+        }
+      }
+      .rounded {
+        height: auto;
+      }
+    }
+
+    a:hover {
+      .text-block {
+        display: block;
+        transition: transform 1s;
+        p {
+          color: #fff !important;
+        }
+      }
+      img {
+        opacity: 0.8;
+        transition: transform 0.7s;
+        animation: animate 40s linear infinite;
+
+        @keyframes animate {
+          0% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.4);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+      }
     }
   }
 }
@@ -504,21 +557,51 @@
     background-size: cover;
   }
   .footer-content {
+    margin-top: 100px;
     height: 60vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: #fff;
     font-size: 0.9em;
     opacity: 0.7;
+    height: auto;
+    p {
+      height: auto;
+      color: #eb2ab8;
+      font-size: 1.3rem;
+    }
+    .social-media {
+      height: auto;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eb2ab8;
+        border-radius: 50%;
+        margin: 10px;
+        i {
+          height: auto;
+          color: #fff;
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
 
 .btn-buy {
   position: fixed;
   z-index: 1;
-  margin-top: 15%;
+  margin-top: 20%;
   bottom: 0px;
   left: 1px;
   width: 100px;
@@ -536,6 +619,7 @@
 
     i {
       color: #fff;
+      height: auto;
     }
   }
 }
