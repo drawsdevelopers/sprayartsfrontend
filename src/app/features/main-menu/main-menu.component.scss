@@ -57,6 +57,18 @@
   display: flex;
   margin-right: auto;
 }
-.icon {
-  display: flex;
+.logo {
+  cursor: pointer;
+
+  .icon {
+    display: block;
+    height: 7vh;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+  }
+  :hover {
+    background: rgba($color: #000, $alpha: 0.7);
+  }
 }

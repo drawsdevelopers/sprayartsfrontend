@@ -41,7 +41,5 @@ export class ParallaxDirective {
       1 - window.scrollY / window.scrollY > 600
         ? window.scrollY + 600
         : 600 + '';
-    console.log(this.eleRef.nativeElement.style.opacity);
-    console.log('this.initialTop', this.initialTop);
   }
 }

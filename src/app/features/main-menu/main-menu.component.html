@@ -1,6 +1,8 @@
 <header class="container-menu">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Spray Art</a>
+    <a class="logo mr-5" href="/">
+      <img class="icon" src="../../../assets/img/logo.jpg" alt="logo" />
+    </a>
     <button
       class="navbar-toggler"
       type="button"
@@ -40,23 +42,23 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Festivais
+            Festival
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">NOVIDADES</a></li>
-            <li><a class="dropdown-item" href="#">DESTINO</a></li>
-            <li><a class="dropdown-item" href="#">DESTAQUE</a></li>
-            <li><a class="dropdown-item" href="#">GÊNERO</a></li>
-            <li><a class="dropdown-item" href="#">ARTISTAS</a></li>
-            <li><a class="dropdown-item" href="#">EXPERIÊNCIAS</a></li>
-            <li><a class="dropdown-item" href="#">INSPIRAÇÃO</a></li>
+            <li><a class="dropdown-item" href="#">Novidade</a></li>
+            <li><a class="dropdown-item" href="#">Destino</a></li>
+            <li><a class="dropdown-item" href="#">Destaque</a></li>
+            <li><a class="dropdown-item" href="#">Gênero</a></li>
+            <li><a class="dropdown-item" href="#">Artista</a></li>
+            <li><a class="dropdown-item" href="#">Experiência</a></li>
+            <li><a class="dropdown-item" href="#">Inspiração</a></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="http://google.com"
-                >VIAGENS</a
+                >VIAGEM</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">INICIO</a></li>
-                <li><a class="dropdown-item" href="#">COLEÇÕES</a></li>
+                <li><a class="dropdown-item" href="#">Início</a></li>
+                <li><a class="dropdown-item" href="#">Coleção</a></li>
 
                 <!-- <li class="dropdown-submenu">
                   <a class="dropdown-item dropdown-toggle" href="#"
@@ -79,7 +81,7 @@
               </ul>
             </li>
             <li>
-              <a class="dropdown-item" href="#">PRÓXIMOS FESTIVAIS</a>
+              <a class="dropdown-item" href="#">Próximos Festivais</a>
             </li>
           </ul>
         </li>
@@ -92,7 +94,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Produtos
+            Serviços & Produtos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li
@@ -103,19 +105,19 @@
               align-items-center
             >
               <a class="dropdown-item" href="#">
-                <span class="title">NWW</span>
+                <span class="title">Nww</span>
                 <span class="icon"><i class="fa fa-shopping-cart"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">FISE AREA</span>
+                <span class="title">Fise Area</span>
                 <span class="icon"><i class="fa fa-shopping-cart"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">STROKE ART FAIR</span>
+                <span class="title">Stroke Art Fair</span>
                 <span class="icon  ml-2"
                   ><i class="fa fa-shopping-cart"></i
                 ></span>
@@ -123,20 +125,17 @@
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">CITYLEAKS</span>
+                <span class="title">Cityleaks</span>
                 <span class="icon"><i class="fa fa-shopping-cart"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">STORROR</span>
+                <span class="title">Storror</span>
                 <span class="icon"><i class="fa fa-shopping-cart"></i></span>
               </a>
             </li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Serviços</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -147,7 +146,7 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Gramáticas Urbanas
+            Gramática Urbana
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li
@@ -158,31 +157,31 @@
               align-items-center
             >
               <a class="dropdown-item" href="#">
-                <span class="title">ARTES</span>
+                <span class="title">Arte</span>
                 <span class="icon"><i class="fa fa-pencil"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">MUSICAS</span>
+                <span class="title">Música</span>
                 <span class="icon"><i class="fa fa-music"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">ESPORTES</span>
+                <span class="title">Esporte</span>
                 <span class="icon"><i class="fa fa-soccer-ball-o"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">DANÇA</span>
+                <span class="title">Dança</span>
                 <span class="icon"><i class="fa fa-user"></i></span>
               </a>
             </li>
             <li>
               <a class="dropdown-item" href="#">
-                <span class="title">ESTILO DE VIDA </span>
+                <span class="title">Estilo de vida </span>
                 <span class="icon ml-2"><i class="fa fa-glass"></i></span>
               </a>
             </li>
@@ -194,9 +193,9 @@
       </ul>
 
       <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">
+        <a class="btn btn-outline-dark my-2 my-sm-0" [routerLink]="['/login']">
           Iniciar sessão
-        </button>
+        </a>
       </form>
     </div>
   </nav>

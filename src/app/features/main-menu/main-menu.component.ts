@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FesticketService } from 'src/app/shared/services/festicket.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-
-  constructor() { }
+  constructor(private festicketService: FesticketService) {}
 
   ngOnInit() {
+    this.festicketService
+      .getMenu()
+      .subscribe(response => console.log(response));
   }
-
 }
