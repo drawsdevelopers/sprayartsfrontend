@@ -11,18 +11,17 @@ export class FesticketService {
   private url = 'https://www.festicket.com/api/v1/festivals';
 
   getMenu(): Observable<any[]> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        Authorization: 'Basic 4472fd1e0aa3d29f4ada9e92a0cbb92d6cf5bae9'
-      })
-    };
-    debugger;
     return this.http
-      .get<any>(this.url, {
-        headers: new HttpHeaders().set(
-          'Authorization',
-          'Basic 4472fd1e0aa3d29f4ada9e92a0cbb92d6cf5bae9'
-        )
+      .get(this.url, {
+        headers: new HttpHeaders()
+          .set('Authorization', '4472fd1e0aa3d29f4ada9e92a0cbb92d6cf5bae9')
+          .set('Access-Control-Allow-Origin', '*')
+          .set('Access-Control-Expose-Headers', 'Authorization')
+          .set(
+            'Access-Control-Allow-Methods',
+            'POST, PUT, GET, OPTIONS, DELETE'
+          )
+          .set('Access-Control-Allow-Credentials', 'true')
       })
       .pipe(catchError(this.handleError), map(this.jsonToModel));
   }
