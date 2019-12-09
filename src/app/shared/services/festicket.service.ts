@@ -8,20 +8,19 @@ import { map, catchError, flatMap } from 'rxjs/operators';
 })
 export class FesticketService {
   constructor(private http: HttpClient) {}
-  private url = 'https://www.festicket.com/api/v1/festivals';
+  private url = 'http://localhost:4200/api/v1/festivals';
 
   getMenu(): Observable<any[]> {
     return this.http
       .get(this.url, {
         headers: new HttpHeaders()
-          .set('Authorization', '4472fd1e0aa3d29f4ada9e92a0cbb92d6cf5bae9')
-          .set('Access-Control-Allow-Origin', '*')
-          .set('Access-Control-Expose-Headers', 'Authorization')
           .set(
-            'Access-Control-Allow-Methods',
-            'POST, PUT, GET, OPTIONS, DELETE'
+            'Authorization',
+            'Token 4472fd1e0aa3d29f4ada9e92a0cbb92d6cf5bae9'
           )
-          .set('Access-Control-Allow-Credentials', 'true')
+          .set('Access-Control-Allow-Headers', 'Content-Type')
+          .set('Access-Control-Allow-Methods', 'GET')
+          .set('Access-Control-Allow-Origin', '*')
       })
       .pipe(catchError(this.handleError), map(this.jsonToModel));
   }

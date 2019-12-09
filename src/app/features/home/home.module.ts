@@ -5,9 +5,10 @@ import { HomeComponent } from './components/home.component';
 import { HomeRoutingComponent } from './home-routing.component';
 import { HomeRoutingModule } from './home-routing.module';
 
+const componentsObject = [HomeComponent, HomeRoutingComponent];
 @NgModule({
-  declarations: [HomeComponent, HomeRoutingComponent],
+  declarations: [...componentsObject],
   imports: [CommonModule, SharedModule, HomeRoutingModule],
-  exports: []
+  exports: [...componentsObject]
 })
 export class HomeModule {}
